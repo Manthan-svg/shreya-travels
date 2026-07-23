@@ -56,27 +56,28 @@ button { cursor: pointer; }
    =========================== */
 :root {
   /* Brand Colors */
-  --primary:       #1B3A5C;
-  --primary-light:  #254B73;
-  --primary-dark:   #122840;
-  --accent:        #D4A24C;
-  --accent-light:  #E4BD7A;
-  --accent-dark:   #B8872E;
-  --terracotta:    #E07A5F;
-  --terracotta-light: #E99A85;
-  --bg:            #FAF7F2;
-  --bg-alt:        #F3EDE3;
-  --text:          #2B2B2B;
+  --primary:       #0F3460;
+  --primary-light: #1A467D;
+  --primary-dark:  #091F3A;
+  --accent:        #2EA3F2;
+  --accent-light:  #5AB5F5;
+  --accent-dark:   #1E82C4;
+  --cta-gradient:  linear-gradient(135deg, #E31E24, #F7941D);
+  --cta-red:       #E31E24;
+  --cta-orange:    #F7941D;
+  --bg:            #FFFFFF;
+  --bg-alt:        #F7F8FA;
+  --text:          #222831;
   --text-light:    #5A5A5A;
   --text-muted:    #8A8A8A;
   --white:         #FFFFFF;
   --border:        #E5DFD5;
   /* Shadows */
-  --shadow-sm:   0 2px 8px rgba(27,58,92,0.06);
-  --shadow-md:   0 4px 20px rgba(27,58,92,0.08);
-  --shadow-lg:   0 8px 40px rgba(27,58,92,0.12);
-  --shadow-card: 0 6px 24px rgba(27,58,92,0.07);
-  --shadow-gold: 0 4px 20px rgba(212,162,76,0.25);
+  --shadow-sm:   0 2px 8px rgba(15, 52, 96, 0.06);
+  --shadow-md:   0 4px 20px rgba(15, 52, 96, 0.08);
+  --shadow-lg:   0 8px 40px rgba(15, 52, 96, 0.12);
+  --shadow-card: 0 6px 24px rgba(15, 52, 96, 0.07);
+  --shadow-cta:  0 4px 20px rgba(227, 30, 36, 0.25);
    --space-xs:  0.5rem;
   --space-sm:  1rem;
   --space-md:  1.5rem;
@@ -155,7 +156,7 @@ p {
   display: block;
   width: 60px;
   height: 3px;
-  background: var(--accent);
+  background: var(--cta-gradient);
   margin: 0.75rem auto 0;
   border-radius: var(--radius-full);
 }
@@ -197,14 +198,15 @@ p {
   white-space: nowrap;
 }
 .btn-primary {
-  background: var(--accent);
-  color: var(--primary-dark);
-  box-shadow: var(--shadow-gold);
+  background: var(--cta-gradient);
+  color: var(--white);
+  box-shadow: var(--shadow-cta);
+  border: none;
 }
 .btn-primary:hover {
-  background: var(--accent-dark);
+  background: linear-gradient(135deg, #CC1B20, #E68515);
   transform: translateY(-2px);
-  box-shadow: 0 6px 28px rgba(212,162,76,0.35);
+  box-shadow: 0 6px 28px rgba(227, 30, 36, 0.35);
 }
 .btn-secondary {
   background: var(--white);
@@ -218,12 +220,13 @@ p {
 }
 .btn-outline-gold {
   background: transparent;
-  color: var(--accent);
-  border: 2px solid var(--accent);
+  color: var(--cta-orange);
+  border: 2px solid var(--cta-orange);
 }
 .btn-outline-gold:hover {
-  background: var(--accent);
-  color: var(--primary-dark);
+  background: var(--cta-gradient);
+  color: var(--white);
+  border-color: transparent;
   transform: translateY(-2px);
 }
 
@@ -268,6 +271,10 @@ p {
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid transparent;
   transition: all var(--transition);
+  height: 76px;
+  min-height: 76px;
+  max-height: 76px;
+  overflow: visible;
 }
 .header.nav-open {
   z-index: 10000;
@@ -283,46 +290,37 @@ p {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
+  height: 76px;
+  min-height: 76px;
+  max-height: 76px;
+  overflow: visible;
 }
 .logo {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: 0.85rem;
   text-decoration: none;
   flex-shrink: 0;
 }
-.logo-icon {
-  width: 48px;
-  height: 48px;
-  background: linear-gradient(135deg, var(--primary), var(--primary-light));
-  border-radius: var(--radius-md);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.5rem;
-  color: var(--accent);
-  box-shadow: var(--shadow-sm);
+.logo-img {
+  height: clamp(56px, 6vw, 72px);
+  width: auto;
+  object-fit: contain;
 }
-
 .logo-text {
   display: flex;
   flex-direction: column;
 }
 .logo-name {
-  font-family: 'Playfair Display', serif;
   font-weight: 700;
-  font-size: 1.3rem;
-  color: var(--primary);
-  line-height: 1.2;
+  font-size: 1.375rem; /* ~22px */
+  color: #0F3460;
+  line-height: 1.1;
 }
 .logo-tagline {
-  font-size: 0.7rem;
-  color: var(--accent-dark);
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  font-size: 0.75rem; /* ~12px */
+  color: #2EA3F2;
+  font-weight: 500;
 }
 .nav {
   display: none;
@@ -1346,7 +1344,7 @@ p {
   height: 24px;
 }
 .rating-stars {
-  color: #FBBC04;
+  color: var(--cta-orange);
   font-size: 1.1rem;
   letter-spacing: 2px;
 }
@@ -1404,7 +1402,7 @@ p {
   margin-bottom: 0.5rem;
 }
 .testimonial-card .stars {
-  color: #FBBC04;
+  color: var(--cta-orange);
   font-size: 0.9rem;
   letter-spacing: 2px;
   margin-bottom: 0.75rem;
@@ -1609,6 +1607,11 @@ select.form-control {
   color: rgba(255,255,255,0.65);
   font-size: 0.9rem;
   line-height: 1.7;
+}.footer-logo {
+  height: 80px;
+  width: auto;
+  object-fit: contain;
+  margin-bottom: 1rem;
 }
 .footer-col .footer-brand-tagline {
   font-size: 0.8rem;
@@ -2205,7 +2208,7 @@ select.form-control {
   font-family: 'Playfair Display', serif;
   font-size: 1.25rem;
   font-weight: 700;
-  color: var(--primary);
+  color: var(--cta-orange);
 }
 
 .price span {
@@ -3629,7 +3632,7 @@ select.fbs-input {
   font-family: 'Playfair Display', serif;
   font-size: 1.875rem; /* Large and bold */
   font-weight: 700;
-  color: #163B69;
+  color: var(--cta-orange);
 }
 .pkg-price span {
   display: block;
