@@ -2502,7 +2502,7 @@ select.form-control {
   border-radius: 16px;
   border: 1px solid rgba(229, 223, 213, 0.8);
   box-shadow: 0 4px 16px rgba(27, 58, 92, 0.04);
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  transition: all 0.2s ease;
   cursor: pointer;
   text-decoration: none;
   color: inherit;
@@ -2511,9 +2511,10 @@ select.form-control {
   cursor: default;
 }
 .contact-info-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 28px rgba(27, 58, 92, 0.08);
-  border-color: var(--accent);
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+  background: var(--white);
+  border-color: var(--primary);
 }
 .contact-info-card--static:hover {
   transform: translateY(-4px);
@@ -2537,7 +2538,7 @@ select.form-control {
   height: 24px;
   color: var(--primary);
   stroke: var(--primary);
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
 }
 .contact-info-card:hover .contact-info-icon {
   background: var(--primary);
@@ -2555,6 +2556,7 @@ select.form-control {
   color: var(--primary);
   margin-bottom: 0.5rem;
   line-height: 1.3;
+  transition: color 0.2s ease;
 }
 .contact-info-card p {
   font-family: 'Inter', sans-serif;
@@ -2562,6 +2564,7 @@ select.form-control {
   color: var(--text-light);
   line-height: 1.6;
   margin: 0;
+  transition: color 0.2s ease;
 }
 /* --- Map & Form Section --- */
 .contact-map-form-section {
@@ -4310,4 +4313,150 @@ select:focus {
   border-color: var(--accent) !important;
   box-shadow: 0 0 0 3px rgba(212, 162, 76, 0.15) !important;
   background-color: #ffffff;
+}
+/* ===========================
+   HAPPY TRAVELLERS GALLERY
+   =========================== */
+.travel-gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 200px;
+  gap: 16px;
+}
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+}
+.gallery-item-large {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+.gallery-item:hover img {
+  transform: scale(1.06);
+}
+.gallery-caption {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  padding: 14px 16px;
+  background: linear-gradient(to top, rgba(15,52,96,0.85), transparent);
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.gallery-item:hover .gallery-caption {
+  opacity: 1;
+}
+.gallery-location {
+  font-size: 13px;
+  font-weight: 600;
+}
+@media (max-width: 768px) {
+  .travel-gallery { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 160px; }
+  .gallery-item-large { grid-column: span 2; grid-row: span 1; }
+}
+@media (max-width: 480px) {
+  .travel-gallery { grid-template-columns: 1fr; }
+  .gallery-item-large { grid-column: span 1; }
+}
+
+/* ===========================
+   13. PACKAGE CAROUSEL & ACCORDION
+   =========================== */
+.pkg-carousel {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.pkg-carousel-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.pkg-carousel-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+  z-index: 1;
+}
+.pkg-carousel-item.active {
+  opacity: 1;
+  z-index: 2;
+}
+.pkg-carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pkg-carousel-dots {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 6px;
+  z-index: 3;
+}
+.pkg-carousel-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.pkg-carousel-dot.active {
+  background: #ffffff;
+  transform: scale(1.2);
+}
+
+/* Expandable Places Component */
+.pkg-places-container {
+  margin-top: 12px;
+  margin-bottom: 24px;
+}
+.pkg-places-toggle {
+  background: none;
+  border: none;
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 0;
+  transition: color var(--transition);
+}
+.pkg-places-toggle:hover {
+  color: var(--accent-dark);
+}
+.pkg-places-list {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, margin-top 0.4s ease;
+  margin: 0;
+  padding-left: 18px;
+  list-style: disc;
+  color: #555;
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+.pkg-places-container.expanded .pkg-places-list {
+  max-height: 300px;
+  margin-top: 8px;
 }

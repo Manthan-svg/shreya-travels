@@ -447,3 +447,58 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 });
+
+  // ==========================================
+  // 6. PACKAGE CAROUSELS
+  // ==========================================
+  const carousels = document.querySelectorAll('.pkg-carousel');
+  carousels.forEach(carousel => {
+    const items = carousel.querySelectorAll('.pkg-carousel-item');
+    const dots = carousel.querySelectorAll('.pkg-carousel-dot');
+    if (items.length <= 1) return; // No need to slide if 1 or 0 images
+
+    let currentIndex = 0;
+
+    const showSlide = (index) => {
+      items.forEach(item => item.classList.remove('active'));
+      dots.forEach(dot => dot.classList.remove('active'));
+      
+      items[index].classList.add('active');
+      if (dots[index]) dots[index].classList.add('active');
+    };
+
+    // Auto advance
+    setInterval(() => {
+      currentIndex = (currentIndex + 1) % items.length;
+      showSlide(currentIndex);
+    }, 4000);
+
+    // Dot clicks
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', (e) => {
+        e.stopPropagation();
+        currentIndex = index;
+        showSlide(currentIndex);
+      });
+    });
+  });
+
+  // ==========================================
+  // 7. EXPANDABLE PLACES LIST
+  // ==========================================
+  const expandableToggles = document.querySelectorAll('.pkg-places-toggle');
+  expandableToggles.forEach(toggle => {
+    toggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      const container = toggle.closest('.pkg-places-container');
+      if (container) {
+        container.classList.toggle('expanded');
+        // Update arrow text
+        if (container.classList.contains('expanded')) {
+          toggle.innerHTML = 'Top Places to Explore &#x25B4;'; // Up arrow
+        } else {
+          toggle.innerHTML = 'Top Places to Explore &#x25BE;'; // Down arrow
+        }
+      }
+    });
+  });
