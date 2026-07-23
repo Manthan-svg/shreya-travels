@@ -137,15 +137,7 @@ document.addEventListener('DOMContentLoaded', () => {
           </nav>
         </div><!-- end .mobile-drawer-scroll -->
 
-        <!-- CTA FOOTER (absolute-positioned at bottom) -->
-        <div class="drawer-cta-section">
-          <div class="drawer-social">
-            <a href="#" class="drawer-social-btn" aria-label="Facebook">&#128216;</a>
-            <a href="#" class="drawer-social-btn" aria-label="Instagram">&#128248;</a>
-            <a href="#" class="drawer-social-btn" aria-label="YouTube">&#128250;</a>
-            <a href="https://wa.me/919423981386" target="_blank" rel="noopener noreferrer" class="drawer-social-btn" aria-label="WhatsApp">&#128154;</a>
-          </div>
-        </div>
+
 
 
       </aside>
