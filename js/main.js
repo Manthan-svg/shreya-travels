@@ -446,8 +446,6 @@ document.addEventListener('DOMContentLoaded', () => {
     handleContactParallax();
   }
 
-});
-
   // ==========================================
   // 6. PACKAGE CAROUSELS
   // ==========================================
@@ -502,3 +500,159 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+  // ==========================================
+  // 15. PACKAGE ENQUIRE NOW CLICK AUTO-FILL
+  // ==========================================
+  document.addEventListener('click', function(e) {
+    const btn = e.target.closest('.pkg-btn');
+    if (btn) {
+      const card = btn.closest('.pkg-card');
+      if (card) {
+        const titleEl = card.querySelector('.pkg-title');
+        if (titleEl) {
+          const destInput = document.getElementById('pkg_dest');
+          if (destInput) {
+            destInput.value = titleEl.textContent.trim();
+          }
+        }
+      }
+    }
+  });
+
+  // ==========================================
+  // 16. WHATSAPP REDIRECT AFTER FORM SUBMISSION
+  // ==========================================
+  const allForms = document.querySelectorAll('form');
+  allForms.forEach(form => {
+    form.addEventListener('submit', function(e) {
+      if (form.classList.contains('enquiry-form')) return;
+
+      e.preventDefault();
+
+      let isValid = true;
+      const requiredFields = form.querySelectorAll('[required]');
+      requiredFields.forEach(field => {
+        field.classList.remove('error');
+        if (!field.value.trim()) {
+          isValid = false;
+          field.classList.add('error');
+        }
+      });
+
+      if (!isValid) return;
+
+      const submitBtn = form.querySelector('button[type="submit"]') || form.querySelector('.btn');
+      let originalText = submitBtn ? submitBtn.textContent : 'Submit';
+      if (submitBtn) {
+        submitBtn.textContent = '✓ Sent Successfully!';
+        submitBtn.style.background = '#22C55E';
+        submitBtn.style.boxShadow = '0 4px 20px rgba(34,197,94,0.3)';
+        submitBtn.disabled = true;
+      }
+
+      let text = '';
+      const isPackage = form.closest('.pkg-form-card') || form.querySelector('#pkg_dest');
+      const isFlight = form.closest('.fbs-form-card') && form.querySelector('#fb_from');
+      const isVisa = form.closest('.fbs-form-card') && form.querySelector('#vp_service');
+      const isCar = form.closest('.cr-form-card') || form.querySelector('#cr_vehicle');
+
+      if (isPackage) {
+        text = "Hi Shreya Travels, I'd like to enquire about a holiday package.\n";
+        const name = form.querySelector('[name="name"]')?.value.trim();
+        const phone = form.querySelector('[name="phone"]')?.value.trim();
+        const dest = form.querySelector('[name="destination"]')?.value.trim();
+        const date = form.querySelector('[name="date"]')?.value.trim();
+        const travellers = form.querySelector('[name="travellers"]')?.value.trim();
+        const budget = form.querySelector('[name="budget"]')?.value.trim();
+        const req = form.querySelector('[name="requirements"]')?.value.trim();
+
+        if (name) text += `Name: ${name}\n`;
+        if (phone) text += `Phone: ${phone}\n`;
+        if (dest) text += `Preferred Destination: ${dest}\n`;
+        if (date) text += `Travel Dates: ${date}\n`;
+        if (travellers) text += `Number of Travellers: ${travellers}\n`;
+        if (budget) text += `Budget Range: ${budget}\n`;
+        if (req) text += `Special Requirements: ${req}\n`;
+
+      } else if (isFlight) {
+        text = "Hi Shreya Travels, I'd like to get a flight fare quote.\n";
+        const name = form.querySelector('[name="name"]')?.value.trim();
+        const phone = form.querySelector('[name="phone"]')?.value.trim();
+        const email = form.querySelector('[name="email"]')?.value.trim();
+        const from = form.querySelector('[name="from_city"]')?.value.trim();
+        const to = form.querySelector('[name="to_city"]')?.value.trim();
+        const date = form.querySelector('[name="travel_date"]')?.value.trim();
+        const ret = form.querySelector('[name="return_date"]')?.value.trim();
+        const pass = form.querySelector('[name="passengers"]')?.value.trim();
+        const cls = form.querySelector('[name="class"]')?.value.trim();
+        const msg = form.querySelector('[name="message"]')?.value.trim();
+
+        if (name) text += `Name: ${name}\n`;
+        if (phone) text += `Phone: ${phone}\n`;
+        if (email) text += `Email: ${email}\n`;
+        if (from) text += `From: ${from}\n`;
+        if (to) text += `To: ${to}\n`;
+        if (date) text += `Travel Date: ${date}\n`;
+        if (ret) text += `Return Date: ${ret}\n`;
+        if (pass) text += `Passengers: ${pass}\n`;
+        if (cls) text += `Class: ${cls}\n`;
+        if (msg) text += `Special Requests: ${msg}\n`;
+
+      } else if (isVisa) {
+        text = "Hi Shreya Travels, I'd like to enquire about Visa / Passport services.\n";
+        const name = form.querySelector('[name="vp_name"]')?.value.trim();
+        const phone = form.querySelector('[name="vp_phone"]')?.value.trim();
+        const email = form.querySelector('[name="vp_email"]')?.value.trim();
+        const service = form.querySelector('[name="vp_service"]')?.value.trim();
+        const dest = form.querySelector('[name="vp_dest"]')?.value.trim();
+        const date = form.querySelector('[name="vp_date"]')?.value.trim();
+        const msg = form.querySelector('[name="vp_msg"]')?.value.trim();
+
+        if (name) text += `Name: ${name}\n`;
+        if (phone) text += `Phone: ${phone}\n`;
+        if (email) text += `Email: ${email}\n`;
+        if (service) text += `Service Type: ${service}\n`;
+        if (dest) text += `Destination Country: ${dest}\n`;
+        if (date) text += `Tentative Travel Date: ${date}\n`;
+        if (msg) text += `Message: ${msg}\n`;
+
+      } else if (isCar) {
+        text = "Hi Shreya Travels, I'd like to enquire about a car/bus rental.\n";
+        const name = form.querySelector('[name="name"]')?.value.trim();
+        const phone = form.querySelector('[name="phone"]')?.value.trim();
+        const pickup = form.querySelector('[name="pickup"]')?.value.trim();
+        const drop = form.querySelector('[name="drop"]')?.value.trim();
+        const date = form.querySelector('[name="date"]')?.value.trim();
+        const vehicle = form.querySelector('[name="vehicle"]')?.value.trim();
+
+        if (name) text += `Name: ${name}\n`;
+        if (phone) text += `Phone: ${phone}\n`;
+        if (pickup) text += `Pickup Location: ${pickup}\n`;
+        if (drop) text += `Drop Location: ${drop}\n`;
+        if (date) text += `Date: ${date}\n`;
+        if (vehicle) text += `Vehicle Type: ${vehicle}\n`;
+      }
+
+      if (text) {
+        const encoded = encodeURIComponent(text.trim());
+        const waUrl = `https://wa.me/919423005961?text=${encoded}`;
+        
+        setTimeout(() => {
+          window.open(waUrl, '_blank');
+        }, 500);
+      }
+
+      setTimeout(() => {
+        if (submitBtn) {
+          submitBtn.textContent = originalText;
+          submitBtn.style.background = '';
+          submitBtn.style.boxShadow = '';
+          submitBtn.disabled = false;
+        }
+        form.reset();
+      }, 3500);
+    });
+  });
+
+});

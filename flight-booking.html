@@ -118,7 +118,8 @@
         <div class="fbs-right">
           <div class="fbs-form-card">
             <h3 class="fbs-form-title">Get a Fare Quote</h3>
-            <form action="#" method="POST">
+            <form name="flight-booking" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="#">
+              <input type="hidden" name="bot-field">
               <div class="fbs-field">
                 <label for="fb_name">Full Name *</label>
                 <input class="fbs-input" type="text" id="fb_name" name="name" required placeholder="Your full name">
