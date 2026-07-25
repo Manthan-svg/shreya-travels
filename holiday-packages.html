@@ -79,7 +79,11 @@
         <div style="text-align: center; margin-bottom: 2.5rem; width: 100%;">
           <h2 style="font-family: 'Inter', sans-serif; color: var(--primary); font-size: 2.5rem; font-weight: 700;">International Gateways</h2>
         </div>
-        <div class="pkg-grid">
+        <div class="pkg-search-wrap">
+          <input type="text" id="intl-search" placeholder="Search destinations... (e.g. Dubai, Canada)" autocomplete="off">
+          <svg class="pkg-search-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </div>
+        <div class="pkg-grid" id="intl-grid">
           <!-- Dubai -->
           <div class="pkg-card">
             <div class="pkg-image">
@@ -124,6 +128,7 @@
             </div>
             <div class="pkg-body">
               <h3 class="pkg-title">Malaysia Getaway</h3>
+              <p style="font-size: 0.9rem; color: #555; margin-bottom: 12px; margin-top:-6px;">Explore the beauty of Malaysia</p>
               <div class="pkg-tags">
                 <span class="pkg-tag">Twin Towers</span>
                 <span class="pkg-tag">Genting Highlands</span>
@@ -173,6 +178,7 @@
             </div>
             <div class="pkg-body">
               <h3 class="pkg-title">Singapore Highlights</h3>
+              <p style="font-size: 0.9rem; color: #555; margin-bottom: 12px; margin-top:-6px;">The Lion City awaits you</p>
               <div class="pkg-tags">
                 <span class="pkg-tag">Sentosa Island</span>
                 <span class="pkg-tag">Gardens by the Bay</span>
@@ -225,6 +231,7 @@
             </div>
             <div class="pkg-body">
               <h3 class="pkg-title">Bali Paradise</h3>
+              <p style="font-size: 0.9rem; color: #555; margin-bottom: 12px; margin-top:-6px;">Island of Gods and beaches</p>
               <div class="pkg-tags">
                 <span class="pkg-tag">Temple Tours</span>
                 <span class="pkg-tag">Rice Terraces</span>
@@ -249,23 +256,11 @@
             </div>
             <div class="pkg-body">
               <h3 class="pkg-title">Cambodia Heritage Tour</h3>
+              <p style="font-size: 0.9rem; color: #555; margin-bottom: 12px; margin-top:-6px;">Ancient temples and rich heritage</p>
               <div class="pkg-tags">
                 <span class="pkg-tag">Angkor Wat</span>
                 <span class="pkg-tag">Siem Reap</span>
                 <span class="pkg-tag">Ancient Temples</span>
-              </div>
-              <div class="pkg-places-container">
-                <button class="pkg-places-toggle">Top Places to Explore &#x25BE;</button>
-                <ul class="pkg-places-list">
-                  <li>Angkor Wat</li>
-                  <li>Bayon Temple</li>
-                  <li>Ta Prohm</li>
-                  <li>Tonle Sap Lake</li>
-                  <li>Royal Palace</li>
-                  <li>Siem Reap</li>
-                  <li>Banteay Srei</li>
-                  <li>Phnom Kulen</li>
-                </ul>
               </div>
             </div>
             <a href="#enquiry-form" class="pkg-btn">Enquire Now</a>
@@ -365,6 +360,7 @@
             </div>
             <div class="pkg-body">
               <h3 class="pkg-title">Japan Discovery</h3>
+              <p style="font-size: 0.9rem; color: #555; margin-bottom: 12px; margin-top:-6px;">Land of the rising sun</p>
               <div class="pkg-tags">
                 <span class="pkg-tag">Tokyo</span>
                 <span class="pkg-tag">Kyoto</span>
@@ -373,6 +369,403 @@
             </div>
             <a href="#enquiry-form" class="pkg-btn">Enquire Now</a>
           </div>
+
+          <!-- Canada -->
+          <div class="pkg-card" data-place="Canada">
+            <div class="pkg-image">
+              <div class="pkg-carousel">
+                <div class="pkg-carousel-inner">
+                  <div class="pkg-carousel-item active"><img src="images/packages/canada/1.jpg" alt="Canada"></div>
+                  <div class="pkg-carousel-item"><img src="images/packages/canada/2.jpg" alt="Canada"></div>
+                </div>
+                <div class="pkg-carousel-dots">
+                  <div class="pkg-carousel-dot active"></div>
+                  <div class="pkg-carousel-dot"></div>
+                </div>
+              </div>
+            </div>
+            <div class="pkg-body">
+              <h3 class="pkg-title">Explore Canada</h3>
+              <p style="font-size: 0.9rem; color: #555; margin-bottom: 12px; margin-top:-6px;">Discover the Great White North</p>
+              <div class="pkg-tags">
+                <span class="pkg-tag">Niagara Falls</span>
+                <span class="pkg-tag">Banff</span>
+                <span class="pkg-tag">Toronto</span>
+              </div>
+            </div>
+            <a href="#enquiry-form" class="pkg-btn">Enquire Now</a>
+          </div>
+
+          <!-- Sri Lanka -->
+          <div class="pkg-card" data-place="Sri Lanka">
+            <div class="pkg-image">
+              <div class="pkg-carousel">
+                <div class="pkg-carousel-inner">
+                  <div class="pkg-carousel-item active"><img src="images/packages/srilanka/1.jpg" alt="Sri Lanka"></div>
+                  <div class="pkg-carousel-item"><img src="images/packages/srilanka/2.jpg" alt="Sri Lanka"></div>
+                </div>
+                <div class="pkg-carousel-dots">
+                  <div class="pkg-carousel-dot active"></div>
+                  <div class="pkg-carousel-dot"></div>
+                </div>
+              </div>
+            </div>
+            <div class="pkg-body">
+              <h3 class="pkg-title">Beautiful Sri Lanka</h3>
+              <p style="font-size: 0.9rem; color: #555; margin-bottom: 12px; margin-top:-6px;">Beaches, temples & tea plantations</p>
+              <div class="pkg-tags">
+                <span class="pkg-tag">Sigiriya</span>
+                <span class="pkg-tag">Ella</span>
+                <span class="pkg-tag">Colombo</span>
+              </div>
+            </div>
+            <a href="#enquiry-form" class="pkg-btn">Enquire Now</a>
+          </div>
+
+          <!-- Maldives -->
+          <div class="pkg-card" data-place="Maldives">
+            <div class="pkg-image">
+              <div class="pkg-carousel">
+                <div class="pkg-carousel-inner">
+                  <div class="pkg-carousel-item active"><img src="images/packages/maldives/1.jpg" alt="Maldives"></div>
+                  <div class="pkg-carousel-item"><img src="images/packages/maldives/2.jpg" alt="Maldives"></div>
+                </div>
+                <div class="pkg-carousel-dots">
+                  <div class="pkg-carousel-dot active"></div>
+                  <div class="pkg-carousel-dot"></div>
+                </div>
+              </div>
+            </div>
+            <div class="pkg-body">
+              <h3 class="pkg-title">Maldives Paradise</h3>
+              <p style="font-size: 0.9rem; color: #555; margin-bottom: 12px; margin-top:-6px;">Crystal waters & overwater villas</p>
+              <div class="pkg-tags">
+                <span class="pkg-tag">Overwater Bungalows</span>
+                <span class="pkg-tag">Snorkeling</span>
+                <span class="pkg-tag">Beach Resorts</span>
+              </div>
+            </div>
+            <a href="#enquiry-form" class="pkg-btn">Enquire Now</a>
+          </div>
+
+          <!-- Uzbekistan -->
+          <div class="pkg-card" data-place="Uzbekistan">
+            <div class="pkg-image">
+              <div class="pkg-carousel">
+                <div class="pkg-carousel-inner">
+                  <div class="pkg-carousel-item active"><img src="images/packages/uzbekistan/1.jpg" alt="Uzbekistan"></div>
+                  <div class="pkg-carousel-item"><img src="images/packages/uzbekistan/2.png" alt="Uzbekistan"></div>
+                </div>
+                <div class="pkg-carousel-dots">
+                  <div class="pkg-carousel-dot active"></div>
+                  <div class="pkg-carousel-dot"></div>
+                </div>
+              </div>
+            </div>
+            <div class="pkg-body">
+              <h3 class="pkg-title">Uzbekistan Wonders</h3>
+              <p style="font-size: 0.9rem; color: #555; margin-bottom: 12px; margin-top:-6px;">Silk Road heritage & architecture</p>
+              <div class="pkg-tags">
+                <span class="pkg-tag">Samarkand</span>
+                <span class="pkg-tag">Bukhara</span>
+                <span class="pkg-tag">Tashkent</span>
+              </div>
+            </div>
+            <a href="#enquiry-form" class="pkg-btn">Enquire Now</a>
+          </div>
+
+          <!-- Georgia -->
+          <div class="pkg-card" data-place="Georgia">
+            <div class="pkg-image">
+              <div class="pkg-carousel">
+                <div class="pkg-carousel-inner">
+                  <div class="pkg-carousel-item active"><img src="images/packages/georgia/1.png" alt="Georgia"></div>
+                  <div class="pkg-carousel-item"><img src="images/packages/georgia/2.png" alt="Georgia"></div>
+                </div>
+                <div class="pkg-carousel-dots">
+                  <div class="pkg-carousel-dot active"></div>
+                  <div class="pkg-carousel-dot"></div>
+                </div>
+              </div>
+            </div>
+            <div class="pkg-body">
+              <h3 class="pkg-title">Discover Georgia</h3>
+              <p style="font-size: 0.9rem; color: #555; margin-bottom: 12px; margin-top:-6px;">Mountains, wine & culture</p>
+              <div class="pkg-tags">
+                <span class="pkg-tag">Tbilisi</span>
+                <span class="pkg-tag">Kazbegi</span>
+                <span class="pkg-tag">Batumi</span>
+              </div>
+            </div>
+            <a href="#enquiry-form" class="pkg-btn">Enquire Now</a>
+          </div>
+
+          <!-- Australia -->
+          <div class="pkg-card" data-place="Australia">
+            <div class="pkg-image">
+              <div class="pkg-carousel">
+                <div class="pkg-carousel-inner">
+                  <div class="pkg-carousel-item active"><img src="images/packages/australia/1.png" alt="Australia"></div>
+                  <div class="pkg-carousel-item"><img src="images/packages/australia/2.png" alt="Australia"></div>
+                </div>
+                <div class="pkg-carousel-dots">
+                  <div class="pkg-carousel-dot active"></div>
+                  <div class="pkg-carousel-dot"></div>
+                </div>
+              </div>
+            </div>
+            <div class="pkg-body">
+              <h3 class="pkg-title">Amazing Australia</h3>
+              <p style="font-size: 0.9rem; color: #555; margin-bottom: 12px; margin-top:-6px;">Sydney, reefs & outback</p>
+              <div class="pkg-tags">
+                <span class="pkg-tag">Sydney</span>
+                <span class="pkg-tag">Great Barrier Reef</span>
+                <span class="pkg-tag">Melbourne</span>
+              </div>
+            </div>
+            <a href="#enquiry-form" class="pkg-btn">Enquire Now</a>
+          </div>
+
+          <!-- New Zealand -->
+          <div class="pkg-card" data-place="New Zealand">
+            <div class="pkg-image">
+              <div class="pkg-carousel">
+                <div class="pkg-carousel-inner">
+                  <div class="pkg-carousel-item active"><img src="images/packages/newzealand/1.png" alt="New Zealand"></div>
+                  <div class="pkg-carousel-item"><img src="images/packages/newzealand/2.png" alt="New Zealand"></div>
+                </div>
+                <div class="pkg-carousel-dots">
+                  <div class="pkg-carousel-dot active"></div>
+                  <div class="pkg-carousel-dot"></div>
+                </div>
+              </div>
+            </div>
+            <div class="pkg-body">
+              <h3 class="pkg-title">New Zealand Adventure</h3>
+              <p style="font-size: 0.9rem; color: #555; margin-bottom: 12px; margin-top:-6px;">Fjords, mountains & Middle Earth</p>
+              <div class="pkg-tags">
+                <span class="pkg-tag">Milford Sound</span>
+                <span class="pkg-tag">Queenstown</span>
+                <span class="pkg-tag">Hobbiton</span>
+              </div>
+            </div>
+            <a href="#enquiry-form" class="pkg-btn">Enquire Now</a>
+          </div>
+
+          <!-- Philippines -->
+          <div class="pkg-card" data-place="Philippines">
+            <div class="pkg-image">
+              <div class="pkg-carousel">
+                <div class="pkg-carousel-inner">
+                  <div class="pkg-carousel-item active"><img src="images/packages/philippines/1.png" alt="Philippines"></div>
+                  <div class="pkg-carousel-item"><img src="images/packages/philippines/2.png" alt="Philippines"></div>
+                </div>
+                <div class="pkg-carousel-dots">
+                  <div class="pkg-carousel-dot active"></div>
+                  <div class="pkg-carousel-dot"></div>
+                </div>
+              </div>
+            </div>
+            <div class="pkg-body">
+              <h3 class="pkg-title">Philippines Islands</h3>
+              <p style="font-size: 0.9rem; color: #555; margin-bottom: 12px; margin-top:-6px;">Beaches, lagoons & hills</p>
+              <div class="pkg-tags">
+                <span class="pkg-tag">Palawan</span>
+                <span class="pkg-tag">Bohol</span>
+                <span class="pkg-tag">Boracay</span>
+              </div>
+            </div>
+            <a href="#enquiry-form" class="pkg-btn">Enquire Now</a>
+          </div>
+
+          <!-- South Africa -->
+          <div class="pkg-card" data-place="South Africa">
+            <div class="pkg-image">
+              <div class="pkg-carousel">
+                <div class="pkg-carousel-inner">
+                  <div class="pkg-carousel-item active"><img src="images/packages/southafrica/1.png" alt="South Africa"></div>
+                  <div class="pkg-carousel-item"><img src="images/packages/southafrica/2.png" alt="South Africa"></div>
+                </div>
+                <div class="pkg-carousel-dots">
+                  <div class="pkg-carousel-dot active"></div>
+                  <div class="pkg-carousel-dot"></div>
+                </div>
+              </div>
+            </div>
+            <div class="pkg-body">
+              <h3 class="pkg-title">South Africa Safari</h3>
+              <p style="font-size: 0.9rem; color: #555; margin-bottom: 12px; margin-top:-6px;">Wildlife, wine & Table Mountain</p>
+              <div class="pkg-tags">
+                <span class="pkg-tag">Cape Town</span>
+                <span class="pkg-tag">Kruger Park</span>
+                <span class="pkg-tag">Safari</span>
+              </div>
+            </div>
+            <a href="#enquiry-form" class="pkg-btn">Enquire Now</a>
+          </div>
+
+          <!-- South America -->
+          <div class="pkg-card" data-place="South America">
+            <div class="pkg-image">
+              <div class="pkg-carousel">
+                <div class="pkg-carousel-inner">
+                  <div class="pkg-carousel-item active"><img src="images/packages/southamerica/1.png" alt="South America"></div>
+                  <div class="pkg-carousel-item"><img src="images/packages/southamerica/2.png" alt="South America"></div>
+                </div>
+                <div class="pkg-carousel-dots">
+                  <div class="pkg-carousel-dot active"></div>
+                  <div class="pkg-carousel-dot"></div>
+                </div>
+              </div>
+            </div>
+            <div class="pkg-body">
+              <h3 class="pkg-title">South America Explorer</h3>
+              <p style="font-size: 0.9rem; color: #555; margin-bottom: 12px; margin-top:-6px;">Machu Picchu & Iguazu Falls</p>
+              <div class="pkg-tags">
+                <span class="pkg-tag">Machu Picchu</span>
+                <span class="pkg-tag">Iguazu Falls</span>
+                <span class="pkg-tag">Patagonia</span>
+              </div>
+            </div>
+            <a href="#enquiry-form" class="pkg-btn">Enquire Now</a>
+          </div>
+
+          <!-- Brazil -->
+          <div class="pkg-card" data-place="Brazil">
+            <div class="pkg-image">
+              <div class="pkg-carousel">
+                <div class="pkg-carousel-inner">
+                  <div class="pkg-carousel-item active"><img src="images/packages/brazil/1.png" alt="Brazil"></div>
+                  <div class="pkg-carousel-item"><img src="images/packages/brazil/2.png" alt="Brazil"></div>
+                </div>
+                <div class="pkg-carousel-dots">
+                  <div class="pkg-carousel-dot active"></div>
+                  <div class="pkg-carousel-dot"></div>
+                </div>
+              </div>
+            </div>
+            <div class="pkg-body">
+              <h3 class="pkg-title">Vibrant Brazil</h3>
+              <p style="font-size: 0.9rem; color: #555; margin-bottom: 12px; margin-top:-6px;">Carnival, beaches & rainforests</p>
+              <div class="pkg-tags">
+                <span class="pkg-tag">Rio de Janeiro</span>
+                <span class="pkg-tag">Amazon</span>
+                <span class="pkg-tag">Sao Paulo</span>
+              </div>
+            </div>
+            <a href="#enquiry-form" class="pkg-btn">Enquire Now</a>
+          </div>
+
+          <!-- Nepal -->
+          <div class="pkg-card" data-place="Nepal">
+            <div class="pkg-image">
+              <div class="pkg-carousel">
+                <div class="pkg-carousel-inner">
+                  <div class="pkg-carousel-item active"><img src="images/packages/nepal/1.png" alt="Nepal"></div>
+                  <div class="pkg-carousel-item"><img src="images/packages/nepal/2.png" alt="Nepal"></div>
+                </div>
+                <div class="pkg-carousel-dots">
+                  <div class="pkg-carousel-dot active"></div>
+                  <div class="pkg-carousel-dot"></div>
+                </div>
+              </div>
+            </div>
+            <div class="pkg-body">
+              <h3 class="pkg-title">Nepal Himalayas</h3>
+              <p style="font-size: 0.9rem; color: #555; margin-bottom: 12px; margin-top:-6px;">Everest, temples & trekking</p>
+              <div class="pkg-tags">
+                <span class="pkg-tag">Kathmandu</span>
+                <span class="pkg-tag">Pokhara</span>
+                <span class="pkg-tag">Everest Trek</span>
+              </div>
+            </div>
+            <a href="#enquiry-form" class="pkg-btn">Enquire Now</a>
+          </div>
+
+          <!-- Turkey -->
+          <div class="pkg-card" data-place="Turkey">
+            <div class="pkg-image">
+              <div class="pkg-carousel">
+                <div class="pkg-carousel-inner">
+                  <div class="pkg-carousel-item active"><img src="images/packages/turkey/1.png" alt="Turkey"></div>
+                  <div class="pkg-carousel-item"><img src="images/packages/turkey/2.png" alt="Turkey"></div>
+                </div>
+                <div class="pkg-carousel-dots">
+                  <div class="pkg-carousel-dot active"></div>
+                  <div class="pkg-carousel-dot"></div>
+                </div>
+              </div>
+            </div>
+            <div class="pkg-body">
+              <h3 class="pkg-title">Magical Turkey</h3>
+              <p style="font-size: 0.9rem; color: #555; margin-bottom: 12px; margin-top:-6px;">Istanbul, Cappadocia & beyond</p>
+              <div class="pkg-tags">
+                <span class="pkg-tag">Cappadocia</span>
+                <span class="pkg-tag">Istanbul</span>
+                <span class="pkg-tag">Pamukkale</span>
+              </div>
+            </div>
+            <a href="#enquiry-form" class="pkg-btn">Enquire Now</a>
+          </div>
+
+          <!-- Russia -->
+          <div class="pkg-card" data-place="Russia">
+            <div class="pkg-image">
+              <div class="pkg-carousel">
+                <div class="pkg-carousel-inner">
+                  <div class="pkg-carousel-item active"><img src="images/packages/russia/1.png" alt="Russia"></div>
+                  <div class="pkg-carousel-item"><img src="images/packages/russia/2.png" alt="Russia"></div>
+                </div>
+                <div class="pkg-carousel-dots">
+                  <div class="pkg-carousel-dot active"></div>
+                  <div class="pkg-carousel-dot"></div>
+                </div>
+              </div>
+            </div>
+            <div class="pkg-body">
+              <h3 class="pkg-title">Grand Russia</h3>
+              <p style="font-size: 0.9rem; color: #555; margin-bottom: 12px; margin-top:-6px;">Moscow, St Petersburg & history</p>
+              <div class="pkg-tags">
+                <span class="pkg-tag">Moscow</span>
+                <span class="pkg-tag">St Petersburg</span>
+                <span class="pkg-tag">Trans-Siberian</span>
+              </div>
+            </div>
+            <a href="#enquiry-form" class="pkg-btn">Enquire Now</a>
+          </div>
+
+          <!-- China -->
+          <div class="pkg-card" data-place="China">
+            <div class="pkg-image">
+              <div class="pkg-carousel">
+                <div class="pkg-carousel-inner">
+                  <div class="pkg-carousel-item active"><img src="images/packages/china/1.png" alt="China"></div>
+                  <div class="pkg-carousel-item"><img src="images/packages/china/2.png" alt="China"></div>
+                </div>
+                <div class="pkg-carousel-dots">
+                  <div class="pkg-carousel-dot active"></div>
+                  <div class="pkg-carousel-dot"></div>
+                </div>
+              </div>
+            </div>
+            <div class="pkg-body">
+              <h3 class="pkg-title">Discover China</h3>
+              <p style="font-size: 0.9rem; color: #555; margin-bottom: 12px; margin-top:-6px;">Great Wall, Beijing & Shanghai</p>
+              <div class="pkg-tags">
+                <span class="pkg-tag">Great Wall</span>
+                <span class="pkg-tag">Beijing</span>
+                <span class="pkg-tag">Shanghai</span>
+              </div>
+            </div>
+            <a href="#enquiry-form" class="pkg-btn">Enquire Now</a>
+          </div>
+        </div>
+        <div class="pkg-no-results" id="intl-no-results">No destinations found. Try a different search term.</div>
+        <div class="pkg-toggle-wrapper">
+          <button class="pkg-toggle-btn" id="international-toggle" onclick="toggleShowAll()">
+            Show More
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
         </div>
       </div>
     </section>
@@ -383,7 +776,11 @@
         <div style="text-align: center; margin-bottom: 2.5rem; width: 100%;">
           <h2 style="font-family: 'Inter', sans-serif; color: var(--primary); font-size: 2.5rem; font-weight: 700;">Domestic Gateways</h2>
         </div>
-        <div class="pkg-grid">
+        <div class="pkg-search-wrap">
+          <input type="text" id="domestic-search" placeholder="Search destinations... (e.g. Kerala, Rajasthan)" autocomplete="off">
+          <svg class="pkg-search-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </div>
+        <div class="pkg-grid" id="domestic-grid">
           <!-- Assam -->
           <div class="pkg-card">
             <div class="pkg-image">
@@ -718,6 +1115,351 @@
             </div>
             <a href="#enquiry-form" class="pkg-btn">Enquire Now</a>
           </div>
+
+          <!-- Jammu -->
+          <div class="pkg-card" data-place="Jammu">
+            <div class="pkg-image">
+              <div class="pkg-carousel">
+                <div class="pkg-carousel-inner">
+                  <div class="pkg-carousel-item active"><img src="images/packages/jammu/1.png" alt="Jammu"></div>
+                  <div class="pkg-carousel-item"><img src="images/packages/jammu/2.png" alt="Jammu"></div>
+                </div>
+                <div class="pkg-carousel-dots">
+                  <div class="pkg-carousel-dot active"></div>
+                  <div class="pkg-carousel-dot"></div>
+                </div>
+              </div>
+            </div>
+            <div class="pkg-body">
+              <h3 class="pkg-title">Divine Jammu</h3>
+              <p style="font-size: 0.9rem; color: #555; margin-bottom: 12px; margin-top:-6px;">Temples, hills & spirituality</p>
+              <div class="pkg-tags">
+                <span class="pkg-tag">Vaishno Devi</span>
+                <span class="pkg-tag">Patnitop</span>
+                <span class="pkg-tag">Katra</span>
+              </div>
+            </div>
+            <a href="#enquiry-form" class="pkg-btn">Enquire Now</a>
+          </div>
+
+          <!-- Punjab -->
+          <div class="pkg-card" data-place="Punjab">
+            <div class="pkg-image">
+              <div class="pkg-carousel">
+                <div class="pkg-carousel-inner">
+                  <div class="pkg-carousel-item active"><img src="images/packages/punjab/1.png" alt="Punjab"></div>
+                  <div class="pkg-carousel-item"><img src="images/packages/punjab/2.png" alt="Punjab"></div>
+                </div>
+                <div class="pkg-carousel-dots">
+                  <div class="pkg-carousel-dot active"></div>
+                  <div class="pkg-carousel-dot"></div>
+                </div>
+              </div>
+            </div>
+            <div class="pkg-body">
+              <h3 class="pkg-title">Vibrant Punjab</h3>
+              <p style="font-size: 0.9rem; color: #555; margin-bottom: 12px; margin-top:-6px;">Golden Temple & rich culture</p>
+              <div class="pkg-tags">
+                <span class="pkg-tag">Amritsar</span>
+                <span class="pkg-tag">Golden Temple</span>
+                <span class="pkg-tag">Wagah Border</span>
+              </div>
+            </div>
+            <a href="#enquiry-form" class="pkg-btn">Enquire Now</a>
+          </div>
+
+          <!-- West Bengal -->
+          <div class="pkg-card" data-place="West Bengal">
+            <div class="pkg-image">
+              <div class="pkg-carousel">
+                <div class="pkg-carousel-inner">
+                  <div class="pkg-carousel-item active"><img src="images/packages/westbengal/1.png" alt="West Bengal"></div>
+                  <div class="pkg-carousel-item"><img src="images/packages/westbengal/2.png" alt="West Bengal"></div>
+                </div>
+                <div class="pkg-carousel-dots">
+                  <div class="pkg-carousel-dot active"></div>
+                  <div class="pkg-carousel-dot"></div>
+                </div>
+              </div>
+            </div>
+            <div class="pkg-body">
+              <h3 class="pkg-title">West Bengal Explorer</h3>
+              <p style="font-size: 0.9rem; color: #555; margin-bottom: 12px; margin-top:-6px;">Kolkata, Darjeeling & Sundarbans</p>
+              <div class="pkg-tags">
+                <span class="pkg-tag">Kolkata</span>
+                <span class="pkg-tag">Darjeeling</span>
+                <span class="pkg-tag">Sundarbans</span>
+              </div>
+            </div>
+            <a href="#enquiry-form" class="pkg-btn">Enquire Now</a>
+          </div>
+
+          <!-- Tamil Nadu -->
+          <div class="pkg-card" data-place="Tamil Nadu">
+            <div class="pkg-image">
+              <div class="pkg-carousel">
+                <div class="pkg-carousel-inner">
+                  <div class="pkg-carousel-item active"><img src="images/packages/tamilnadu/1.png" alt="Tamil Nadu"></div>
+                  <div class="pkg-carousel-item"><img src="images/packages/tamilnadu/2.png" alt="Tamil Nadu"></div>
+                </div>
+                <div class="pkg-carousel-dots">
+                  <div class="pkg-carousel-dot active"></div>
+                  <div class="pkg-carousel-dot"></div>
+                </div>
+              </div>
+            </div>
+            <div class="pkg-body">
+              <h3 class="pkg-title">Tamil Nadu Heritage</h3>
+              <p style="font-size: 0.9rem; color: #555; margin-bottom: 12px; margin-top:-6px;">Temples, beaches & hill stations</p>
+              <div class="pkg-tags">
+                <span class="pkg-tag">Chennai</span>
+                <span class="pkg-tag">Madurai</span>
+                <span class="pkg-tag">Kodaikanal</span>
+              </div>
+            </div>
+            <a href="#enquiry-form" class="pkg-btn">Enquire Now</a>
+          </div>
+
+          <!-- Andhra Pradesh -->
+          <div class="pkg-card" data-place="Andhra Pradesh">
+            <div class="pkg-image">
+              <div class="pkg-carousel">
+                <div class="pkg-carousel-inner">
+                  <div class="pkg-carousel-item active"><img src="images/packages/andhrapradesh/1.png" alt="Andhra Pradesh"></div>
+                  <div class="pkg-carousel-item"><img src="images/packages/andhrapradesh/2.png" alt="Andhra Pradesh"></div>
+                </div>
+                <div class="pkg-carousel-dots">
+                  <div class="pkg-carousel-dot active"></div>
+                  <div class="pkg-carousel-dot"></div>
+                </div>
+              </div>
+            </div>
+            <div class="pkg-body">
+              <h3 class="pkg-title">Andhra Pradesh</h3>
+              <p style="font-size: 0.9rem; color: #555; margin-bottom: 12px; margin-top:-6px;">Tirupati, Araku Valley & more</p>
+              <div class="pkg-tags">
+                <span class="pkg-tag">Tirupati</span>
+                <span class="pkg-tag">Araku Valley</span>
+                <span class="pkg-tag">Vizag</span>
+              </div>
+            </div>
+            <a href="#enquiry-form" class="pkg-btn">Enquire Now</a>
+          </div>
+
+          <!-- Telangana -->
+          <div class="pkg-card" data-place="Telangana">
+            <div class="pkg-image">
+              <div class="pkg-carousel">
+                <div class="pkg-carousel-inner">
+                  <div class="pkg-carousel-item active"><img src="images/packages/telangana/1.png" alt="Telangana"></div>
+                  <div class="pkg-carousel-item"><img src="images/packages/telangana/2.png" alt="Telangana"></div>
+                </div>
+                <div class="pkg-carousel-dots">
+                  <div class="pkg-carousel-dot active"></div>
+                  <div class="pkg-carousel-dot"></div>
+                </div>
+              </div>
+            </div>
+            <div class="pkg-body">
+              <h3 class="pkg-title">Telangana Treasures</h3>
+              <p style="font-size: 0.9rem; color: #555; margin-bottom: 12px; margin-top:-6px;">Hyderabad, Charminar & Ramoji</p>
+              <div class="pkg-tags">
+                <span class="pkg-tag">Hyderabad</span>
+                <span class="pkg-tag">Charminar</span>
+                <span class="pkg-tag">Ramoji Film City</span>
+              </div>
+            </div>
+            <a href="#enquiry-form" class="pkg-btn">Enquire Now</a>
+          </div>
+
+          <!-- Uttar Pradesh -->
+          <div class="pkg-card" data-place="Uttar Pradesh">
+            <div class="pkg-image">
+              <div class="pkg-carousel">
+                <div class="pkg-carousel-inner">
+                  <div class="pkg-carousel-item active"><img src="images/packages/uttarpradesh/1.png" alt="Uttar Pradesh"></div>
+                  <div class="pkg-carousel-item"><img src="images/packages/uttarpradesh/2.png" alt="Uttar Pradesh"></div>
+                </div>
+                <div class="pkg-carousel-dots">
+                  <div class="pkg-carousel-dot active"></div>
+                  <div class="pkg-carousel-dot"></div>
+                </div>
+              </div>
+            </div>
+            <div class="pkg-body">
+              <h3 class="pkg-title">Uttar Pradesh</h3>
+              <p style="font-size: 0.9rem; color: #555; margin-bottom: 12px; margin-top:-6px;">Taj Mahal, Varanasi & Ayodhya</p>
+              <div class="pkg-tags">
+                <span class="pkg-tag">Agra</span>
+                <span class="pkg-tag">Varanasi</span>
+                <span class="pkg-tag">Ayodhya</span>
+              </div>
+            </div>
+            <a href="#enquiry-form" class="pkg-btn">Enquire Now</a>
+          </div>
+
+          <!-- Arunachal Pradesh -->
+          <div class="pkg-card" data-place="Arunachal Pradesh">
+            <div class="pkg-image">
+              <div class="pkg-carousel">
+                <div class="pkg-carousel-inner">
+                  <div class="pkg-carousel-item active"><img src="images/packages/arunachalpradesh/1.png" alt="Arunachal Pradesh"></div>
+                  <div class="pkg-carousel-item"><img src="images/packages/arunachalpradesh/2.png" alt="Arunachal Pradesh"></div>
+                </div>
+                <div class="pkg-carousel-dots">
+                  <div class="pkg-carousel-dot active"></div>
+                  <div class="pkg-carousel-dot"></div>
+                </div>
+              </div>
+            </div>
+            <div class="pkg-body">
+              <h3 class="pkg-title">Arunachal Pradesh</h3>
+              <p style="font-size: 0.9rem; color: #555; margin-bottom: 12px; margin-top:-6px;">Hidden paradise of the Northeast</p>
+              <div class="pkg-tags">
+                <span class="pkg-tag">Tawang</span>
+                <span class="pkg-tag">Ziro Valley</span>
+                <span class="pkg-tag">Bomdila</span>
+              </div>
+            </div>
+            <a href="#enquiry-form" class="pkg-btn">Enquire Now</a>
+          </div>
+
+          <!-- Leh Ladakh -->
+          <div class="pkg-card" data-place="Leh Ladakh">
+            <div class="pkg-image">
+              <div class="pkg-carousel">
+                <div class="pkg-carousel-inner">
+                  <div class="pkg-carousel-item active"><img src="images/packages/lehladakh/1.png" alt="Leh Ladakh"></div>
+                  <div class="pkg-carousel-item"><img src="images/packages/lehladakh/2.png" alt="Leh Ladakh"></div>
+                </div>
+                <div class="pkg-carousel-dots">
+                  <div class="pkg-carousel-dot active"></div>
+                  <div class="pkg-carousel-dot"></div>
+                </div>
+              </div>
+            </div>
+            <div class="pkg-body">
+              <h3 class="pkg-title">Leh Ladakh Adventure</h3>
+              <p style="font-size: 0.9rem; color: #555; margin-bottom: 12px; margin-top:-6px;">High passes, lakes & monasteries</p>
+              <div class="pkg-tags">
+                <span class="pkg-tag">Pangong Lake</span>
+                <span class="pkg-tag">Nubra Valley</span>
+                <span class="pkg-tag">Khardung La</span>
+              </div>
+            </div>
+            <a href="#enquiry-form" class="pkg-btn">Enquire Now</a>
+          </div>
+
+          <!-- Madhya Pradesh -->
+          <div class="pkg-card" data-place="Madhya Pradesh">
+            <div class="pkg-image">
+              <div class="pkg-carousel">
+                <div class="pkg-carousel-inner">
+                  <div class="pkg-carousel-item active"><img src="images/packages/madhyapradesh/1.jpg" alt="Madhya Pradesh"></div>
+                  <div class="pkg-carousel-item"><img src="images/packages/madhyapradesh/2.jpg" alt="Madhya Pradesh"></div>
+                </div>
+                <div class="pkg-carousel-dots">
+                  <div class="pkg-carousel-dot active"></div>
+                  <div class="pkg-carousel-dot"></div>
+                </div>
+              </div>
+            </div>
+            <div class="pkg-body">
+              <h3 class="pkg-title">Madhya Pradesh</h3>
+              <p style="font-size: 0.9rem; color: #555; margin-bottom: 12px; margin-top:-6px;">Heart of Incredible India</p>
+              <div class="pkg-tags">
+                <span class="pkg-tag">Khajuraho</span>
+                <span class="pkg-tag">Bandhavgarh</span>
+                <span class="pkg-tag">Sanchi</span>
+              </div>
+            </div>
+            <a href="#enquiry-form" class="pkg-btn">Enquire Now</a>
+          </div>
+
+          <!-- Chhattisgarh -->
+          <div class="pkg-card" data-place="Chhattisgarh">
+            <div class="pkg-image">
+              <div class="pkg-carousel">
+                <div class="pkg-carousel-inner">
+                  <div class="pkg-carousel-item active"><img src="images/packages/chhattisgarh/1.jpg" alt="Chhattisgarh"></div>
+                  <div class="pkg-carousel-item"><img src="images/packages/chhattisgarh/2.jpg" alt="Chhattisgarh"></div>
+                </div>
+                <div class="pkg-carousel-dots">
+                  <div class="pkg-carousel-dot active"></div>
+                  <div class="pkg-carousel-dot"></div>
+                </div>
+              </div>
+            </div>
+            <div class="pkg-body">
+              <h3 class="pkg-title">Chhattisgarh</h3>
+              <p style="font-size: 0.9rem; color: #555; margin-bottom: 12px; margin-top:-6px;">Waterfalls and tribal heritage</p>
+              <div class="pkg-tags">
+                <span class="pkg-tag">Chitrakote Falls</span>
+                <span class="pkg-tag">Sirpur</span>
+                <span class="pkg-tag">Bastar</span>
+              </div>
+            </div>
+            <a href="#enquiry-form" class="pkg-btn">Enquire Now</a>
+          </div>
+
+          <!-- Bihar -->
+          <div class="pkg-card" data-place="Bihar">
+            <div class="pkg-image">
+              <div class="pkg-carousel">
+                <div class="pkg-carousel-inner">
+                  <div class="pkg-carousel-item active"><img src="images/packages/bihar/1.jpg" alt="Bihar"></div>
+                  <div class="pkg-carousel-item"><img src="images/packages/bihar/2.jpg" alt="Bihar"></div>
+                </div>
+                <div class="pkg-carousel-dots">
+                  <div class="pkg-carousel-dot active"></div>
+                  <div class="pkg-carousel-dot"></div>
+                </div>
+              </div>
+            </div>
+            <div class="pkg-body">
+              <h3 class="pkg-title">Bihar</h3>
+              <p style="font-size: 0.9rem; color: #555; margin-bottom: 12px; margin-top:-6px;">Land of enlightenment</p>
+              <div class="pkg-tags">
+                <span class="pkg-tag">Bodh Gaya</span>
+                <span class="pkg-tag">Nalanda</span>
+                <span class="pkg-tag">Rajgir</span>
+              </div>
+            </div>
+            <a href="#enquiry-form" class="pkg-btn">Enquire Now</a>
+          </div>
+
+          <!-- Meghalaya -->
+          <div class="pkg-card" data-place="Meghalaya">
+            <div class="pkg-image">
+              <div class="pkg-carousel">
+                <div class="pkg-carousel-inner">
+                  <div class="pkg-carousel-item active"><img src="images/packages/meghalaya/1.jpg" alt="Meghalaya"></div>
+                  <div class="pkg-carousel-item"><img src="images/packages/meghalaya/2.jpg" alt="Meghalaya"></div>
+                </div>
+                <div class="pkg-carousel-dots">
+                  <div class="pkg-carousel-dot active"></div>
+                  <div class="pkg-carousel-dot"></div>
+                </div>
+              </div>
+            </div>
+            <div class="pkg-body">
+              <h3 class="pkg-title">Meghalaya</h3>
+              <p style="font-size: 0.9rem; color: #555; margin-bottom: 12px; margin-top:-6px;">Abode of clouds</p>
+              <div class="pkg-tags">
+                <span class="pkg-tag">Shillong</span>
+                <span class="pkg-tag">Cherrapunji</span>
+                <span class="pkg-tag">Dawki</span>
+              </div>
+            </div>
+            <a href="#enquiry-form" class="pkg-btn">Enquire Now</a>
+          </div>
+        </div>
+        <div class="pkg-no-results" id="domestic-no-results">No destinations found. Try a different search term.</div>
+        <div class="pkg-toggle-wrapper">
+          <button class="pkg-toggle-btn" id="domestic-toggle" onclick="toggleDomesticShowAll()">
+            Show More
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
         </div>
       </div>
     </section>
@@ -865,6 +1607,168 @@
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="currentColor"><path d="M16.004 0h-.008C7.174 0 0 7.176 0 16.004c0 3.5 1.128 6.744 3.046 9.378L1.054 31.29l6.118-1.958A15.924 15.924 0 0 0 16.004 32C24.826 32 32 24.826 32 16.004 32 7.174 24.826 0 16.004 0zm9.342 22.616c-.392 1.102-1.936 2.018-3.178 2.284-.846.18-1.95.324-5.67-1.218-4.762-1.972-7.826-6.81-8.064-7.124-.23-.314-1.936-2.578-1.936-4.918 0-2.34 1.226-3.488 1.662-3.964.392-.432 1.03-.62 1.638-.62.198 0 .376.01.536.018.476.02.714.048 1.028.796.392.932 1.348 3.288 1.466 3.526.118.24.236.554.078.868-.148.324-.276.468-.516.742-.24.274-.468.484-.708.78-.222.258-.472.534-.196 1.012.276.468 1.226 2.024 2.634 3.278 1.81 1.612 3.334 2.112 3.808 2.35.476.238.752.198 1.028-.118.286-.326 1.216-1.416 1.54-1.902.314-.486.638-.406 1.074-.244.44.158 2.786 1.314 3.262 1.554.476.238.792.358.91.554.116.198.116 1.14-.276 2.242z"/></svg>
   </a>
 
+
+  <!-- INTERNATIONAL SEARCH & FILTER SCRIPT -->
+  <script>
+    (function() {
+      const VISIBLE_COUNT = 6;
+      const grid = document.getElementById('intl-grid');
+      const searchInput = document.getElementById('intl-search');
+      const showAllBtn = document.getElementById('international-toggle');
+      const noResults = document.getElementById('intl-no-results');
+      let showAll = false;
+
+      function getCards() {
+        return Array.from(grid.querySelectorAll('.pkg-card'));
+      }
+
+      function applyVisibility() {
+        const query = searchInput.value.trim().toLowerCase();
+        const cards = getCards();
+        let matchCount = 0;
+
+        cards.forEach((card, i) => {
+          const place = (card.getAttribute('data-place') || '').toLowerCase();
+          const title = (card.querySelector('.pkg-title') || {}).textContent || '';
+          const tags = Array.from(card.querySelectorAll('.pkg-tag')).map(t => t.textContent.toLowerCase()).join(' ');
+          const searchable = place + ' ' + title.toLowerCase() + ' ' + tags;
+
+          if (query) {
+            // Search mode: show only matching cards
+            if (searchable.includes(query)) {
+              card.classList.remove('pkg-card-hidden');
+              matchCount++;
+            } else {
+              card.classList.add('pkg-card-hidden');
+            }
+          } else {
+            // Default mode: show first N or all
+            if (showAll || i < VISIBLE_COUNT) {
+              card.classList.remove('pkg-card-hidden');
+              matchCount++;
+            } else {
+              card.classList.add('pkg-card-hidden');
+            }
+          }
+        });
+
+        // Toggle no-results message
+        if (query && matchCount === 0) {
+          noResults.classList.add('visible');
+        } else {
+          noResults.classList.remove('visible');
+        }
+
+        // Toggle show-all button visibility
+        if (query) {
+          showAllBtn.style.display = 'none';
+        } else {
+          showAllBtn.style.display = cards.length > VISIBLE_COUNT ? 'inline-flex' : 'none';
+          showAllBtn.textContent = '';
+          showAllBtn.innerHTML = showAll
+            ? 'Show Less <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>'
+            : 'Show More <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>';
+          if (showAll) showAllBtn.classList.add('expanded');
+          else showAllBtn.classList.remove('expanded');
+        }
+      }
+
+      // Search input handler
+      searchInput.addEventListener('input', function() {
+        applyVisibility();
+      });
+
+      // Show All / Show Less toggle
+      window.toggleShowAll = function() {
+        showAll = !showAll;
+        applyVisibility();
+        if (!showAll) {
+          const section = grid.closest('section');
+          if (section) section.scrollIntoView({ behavior: 'smooth' });
+        }
+      };
+
+      // Initial state
+      applyVisibility();
+    })();
+  </script>
+
+  <!-- DOMESTIC SEARCH & FILTER SCRIPT -->
+  <script>
+    (function() {
+      const VISIBLE_COUNT = 6;
+      const grid = document.getElementById('domestic-grid');
+      const searchInput = document.getElementById('domestic-search');
+      const showAllBtn = document.getElementById('domestic-toggle');
+      const noResults = document.getElementById('domestic-no-results');
+      let showAll = false;
+
+      function getCards() {
+        return Array.from(grid.querySelectorAll('.pkg-card'));
+      }
+
+      function applyVisibility() {
+        const query = searchInput.value.trim().toLowerCase();
+        const cards = getCards();
+        let matchCount = 0;
+
+        cards.forEach((card, i) => {
+          const place = (card.getAttribute('data-place') || '').toLowerCase();
+          const title = (card.querySelector('.pkg-title') || {}).textContent || '';
+          const tags = Array.from(card.querySelectorAll('.pkg-tag')).map(t => t.textContent.toLowerCase()).join(' ');
+          const searchable = place + ' ' + title.toLowerCase() + ' ' + tags;
+
+          if (query) {
+            if (searchable.includes(query)) {
+              card.classList.remove('pkg-card-hidden');
+              matchCount++;
+            } else {
+              card.classList.add('pkg-card-hidden');
+            }
+          } else {
+            if (showAll || i < VISIBLE_COUNT) {
+              card.classList.remove('pkg-card-hidden');
+              matchCount++;
+            } else {
+              card.classList.add('pkg-card-hidden');
+            }
+          }
+        });
+
+        if (query && matchCount === 0) {
+          noResults.classList.add('visible');
+        } else {
+          noResults.classList.remove('visible');
+        }
+
+        if (query) {
+          showAllBtn.style.display = 'none';
+        } else {
+          showAllBtn.style.display = cards.length > VISIBLE_COUNT ? 'inline-flex' : 'none';
+          showAllBtn.innerHTML = showAll
+            ? 'Show Less <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>'
+            : 'Show More <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>';
+          if (showAll) showAllBtn.classList.add('expanded');
+          else showAllBtn.classList.remove('expanded');
+        }
+      }
+
+      searchInput.addEventListener('input', function() {
+        applyVisibility();
+      });
+
+      window.toggleDomesticShowAll = function() {
+        showAll = !showAll;
+        applyVisibility();
+        if (!showAll) {
+          const section = grid.closest('section');
+          if (section) section.scrollIntoView({ behavior: 'smooth' });
+        }
+      };
+
+      applyVisibility();
+    })();
+  </script>
   <script src="js/main.js"></script>
 </body>
 </html>
