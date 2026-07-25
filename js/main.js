@@ -353,6 +353,17 @@ document.addEventListener('DOMContentLoaded', () => {
       });
 
       if (isValid) {
+        // Send form data to Netlify in the background via AJAX
+        const formData = new FormData(form);
+        if (!formData.has('form-name')) {
+          formData.append('form-name', form.getAttribute('name') || 'contact');
+        }
+        fetch("/", {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: new URLSearchParams(formData).toString()
+        }).catch(err => console.error("Netlify form submission error:", err));
+
         // Show success message
         const btn = form.querySelector('.form-submit .btn');
         const originalText = btn.textContent;
@@ -541,6 +552,17 @@ document.addEventListener('DOMContentLoaded', () => {
       });
 
       if (!isValid) return;
+
+      // Send form data to Netlify in the background via AJAX
+      const formData = new FormData(form);
+      if (!formData.has('form-name')) {
+        formData.append('form-name', form.getAttribute('name') || 'enquiry');
+      }
+      fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(formData).toString()
+      }).catch(err => console.error("Netlify form submission error:", err));
 
       const submitBtn = form.querySelector('button[type="submit"]') || form.querySelector('.btn');
       let originalText = submitBtn ? submitBtn.textContent : 'Submit';
