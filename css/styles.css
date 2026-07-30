@@ -2912,7 +2912,7 @@ select.form-control {
 
 @media (min-width: 1024px) {
   .contact-cards-grid {
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 1.5rem;
   }
   .contact-map-form-grid {
