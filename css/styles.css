@@ -4557,3 +4557,119 @@ select:focus {
 .pkg-no-results.visible {
   display: block;
 }
+
+
+/* ==========================================================================
+   AFFILIATIONS & MEMBERSHIPS (ABOUT PAGE)
+   ========================================================================== */
+.affiliations-section {
+  background-color: #fff;
+}
+
+.affiliations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2.5rem;
+}
+
+.affiliation-card {
+  background: var(--light);
+  border-radius: var(--radius-lg);
+  padding: 2rem 1.5rem;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.affiliation-card:hover {
+  transform: translateY(-5px);
+}
+
+.affiliation-img-wrapper {
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.affiliation-logo {
+  max-width: 120px;
+  max-height: 100px;
+  object-fit: contain;
+}
+
+.affiliation-cert {
+  max-width: 100%;
+  max-height: 120px;
+  object-fit: contain;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.affiliation-cert:hover {
+  transform: scale(1.05);
+}
+
+.affiliation-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: var(--dark);
+}
+
+.affiliation-card p {
+  font-size: 0.95rem;
+  color: var(--gray);
+  margin: 0;
+}
+
+/* ==========================================================================
+   AFFILIATED WITH BANNER (HOME PAGE)
+   ========================================================================== */
+.affiliated-banner {
+  background-color: #f8f9fa;
+  padding: 2rem 0;
+  border-top: 1px solid #eaeaea;
+}
+
+.affiliated-title {
+  text-align: center;
+  font-weight: 600;
+  color: var(--gray);
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.85rem;
+}
+
+.affiliated-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.affiliated-logo {
+  max-height: 60px;
+  max-width: 150px;
+  object-fit: contain;
+  filter: grayscale(100%) opacity(0.7);
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.affiliated-logo:hover {
+  filter: grayscale(0%) opacity(1);
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .affiliated-logos {
+    gap: 1.5rem;
+  }
+  .affiliated-logo {
+    max-height: 45px;
+  }
+}
