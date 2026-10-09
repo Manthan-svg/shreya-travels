@@ -678,3 +678,32 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 });
+
+// ==========================================
+// 17. IMAGE MODAL
+// ==========================================
+function openModal(src, caption) {
+  const modal = document.getElementById('imageModal');
+  const modalImg = document.getElementById('modalImg');
+  const captionText = document.getElementById('modalCaption');
+  if (modal && modalImg) {
+    modal.style.display = 'block';
+    modalImg.src = src;
+    if (captionText) captionText.innerHTML = caption || '';
+  }
+}
+
+function closeModal() {
+  const modal = document.getElementById('imageModal');
+  if (modal) {
+    modal.style.display = 'none';
+  }
+}
+
+// Close modal when clicking outside the image
+document.addEventListener('click', function(event) {
+  const modal = document.getElementById('imageModal');
+  if (modal && event.target === modal) {
+    closeModal();
+  }
+});

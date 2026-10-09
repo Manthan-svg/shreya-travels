@@ -391,7 +391,9 @@
       <div class="affiliated-logos">
         <img src="images/iaai-logo.jpg" alt="IAAI" class="affiliated-logo">
         <img src="images/uten-logo.jpg" alt="UTEN Mumbai" class="affiliated-logo">
-        <img src="images/setta-certificate.png" alt="SETTA" class="affiliated-logo" style="object-fit: cover; object-position: top; max-width: 140px; border-radius: 4px;">
+        <a href="javascript:void(0);" onclick="openModal('images/setta-certificate.png', 'SETTA Certificate - Allied Member')">
+          <img src="images/setta-certificate.png" alt="SETTA" class="affiliated-logo" style="object-fit: cover; object-position: top; max-width: 140px; border-radius: 4px; cursor: pointer;">
+        </a>
       </div>
     </div>
   </section>
@@ -466,6 +468,13 @@
   <a href="https://wa.me/919423005961?text=Hi%20Shreya%20Travels%2C%20I%27d%20like%20to%20enquire%20about%20your%20travel%20services." class="whatsapp-fab" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="currentColor"><path d="M16.004 0h-.008C7.174 0 0 7.176 0 16.004c0 3.5 1.128 6.744 3.046 9.378L1.054 31.29l6.118-1.958A15.924 15.924 0 0 0 16.004 32C24.826 32 32 24.826 32 16.004 32 7.174 24.826 0 16.004 0zm9.342 22.616c-.392 1.102-1.936 2.018-3.178 2.284-.846.18-1.95.324-5.67-1.218-4.762-1.972-7.826-6.81-8.064-7.124-.23-.314-1.936-2.578-1.936-4.918 0-2.34 1.226-3.488 1.662-3.964.392-.432 1.03-.62 1.638-.62.198 0 .376.01.536.018.476.02.714.048 1.028.796.392.932 1.348 3.288 1.466 3.526.118.24.236.554.078.868-.148.324-.276.468-.516.742-.24.274-.468.484-.708.78-.222.258-.472.534-.196 1.012.276.468 1.226 2.024 2.634 3.278 1.81 1.612 3.334 2.112 3.808 2.35.476.238.752.198 1.028-.118.286-.326 1.216-1.416 1.54-1.902.314-.486.638-.406 1.074-.244.44.158 2.786 1.314 3.262 1.554.476.238.792.358.91.554.116.198.116 1.14-.276 2.242z"/></svg>
   </a>
+
+  <!-- IMAGE MODAL -->
+  <div id="imageModal" class="modal">
+    <span class="modal-close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="modalImg">
+    <div id="modalCaption"></div>
+  </div>
 
   <script src="js/main.js"></script>
 </body>
