@@ -687,23 +687,34 @@ function openModal(src, caption) {
   const modalImg = document.getElementById('modalImg');
   const captionText = document.getElementById('modalCaption');
   if (modal && modalImg) {
-    modal.style.display = 'block';
+    modal.classList.add('active');
+    modal.style.display = 'flex';
     modalImg.src = src;
     if (captionText) captionText.innerHTML = caption || '';
+    document.body.style.overflow = 'hidden';
   }
 }
 
 function closeModal() {
   const modal = document.getElementById('imageModal');
   if (modal) {
+    modal.classList.remove('active');
     modal.style.display = 'none';
+    document.body.style.overflow = '';
   }
 }
 
-// Close modal when clicking outside the image
+// Close modal when clicking outside the image or on close button
 document.addEventListener('click', function(event) {
   const modal = document.getElementById('imageModal');
-  if (modal && event.target === modal) {
+  if (modal && (event.target === modal || event.target.classList.contains('modal-close'))) {
+    closeModal();
+  }
+});
+
+// Close modal on Escape key press
+document.addEventListener('keydown', function(event) {
+  if (event.key === 'Escape') {
     closeModal();
   }
 });
