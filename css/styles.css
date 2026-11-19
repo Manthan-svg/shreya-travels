@@ -4875,3 +4875,61 @@ select:focus {
   text-shadow: 0 1px 4px rgba(0,0,0,0.5);
   line-height: 1.4;
 }
+
+/* ==========================================================================
+   FEATURED TESTIMONIAL CARD (with trip photos)
+   ========================================================================== */
+.testimonial-featured {
+  flex: 0 0 92%;
+  max-width: 420px;
+  border: 2px solid var(--accent, #D4A24C);
+  background: linear-gradient(135deg, #FFFDF7, #FFF9EE);
+  position: relative;
+}
+
+.testimonial-featured:hover {
+  box-shadow: 0 12px 32px rgba(212, 162, 76, 0.18);
+}
+
+.testimonial-trip-badge {
+  display: inline-block;
+  background: var(--primary, #163B69);
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 20px;
+  margin-bottom: 0.65rem;
+  letter-spacing: 0.5px;
+}
+
+.testimonial-trip-photos {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.85rem;
+  border-radius: var(--radius-md, 8px);
+  overflow: hidden;
+}
+
+.testimonial-trip-img {
+  width: 50%;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+}
+
+.testimonial-trip-img:hover {
+  transform: scale(1.03);
+}
+
+@media (max-width: 768px) {
+  .testimonial-featured {
+    flex: 0 0 92%;
+    max-width: 340px;
+  }
+  .testimonial-trip-img {
+    height: 100px;
+  }
+}
